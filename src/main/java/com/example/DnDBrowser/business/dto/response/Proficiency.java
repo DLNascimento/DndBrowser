@@ -2,5 +2,5 @@ package com.example.DnDBrowser.business.dto.response;
 
 public class Proficiency{
     public int value;
-    public Proficiency proficiency;
+    public Proficiency2 proficiency;
 }

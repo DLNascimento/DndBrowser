@@ -1,7 +1,9 @@
 package com.example.DnDBrowser.business.dto.response;
 
-import java.util.ArrayList;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.util.ArrayList;
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Action{
     public ArrayList<Damage> damage;
     public String name;

@@ -5,6 +5,6 @@ import java.util.ArrayList;
 public class SpecialAbility{
     public String name;
     public String desc;
-    public ArrayList<Object> damage;
+    public ArrayList<Damage> damage;
     public Dc dc;
 }
