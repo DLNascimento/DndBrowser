@@ -1,6 +1,8 @@
 package com.example.DnDBrowser.business.service;
 
 import com.example.DnDBrowser.business.dto.GetAllLists;
+import com.example.DnDBrowser.business.dto.IndexMagicItemsDTO;
+import com.example.DnDBrowser.business.dto.response.MagicItemsRoot;
 import com.example.DnDBrowser.business.dto.response.Root;
 import com.example.DnDBrowser.business.mapper.MonsterMapper;
 import com.example.DnDBrowser.infrastructure.clients.DndClient;
@@ -14,6 +16,11 @@ public class ItemsService {
     private final MonsterMapper mapper;
     private final DndClient dndClient;
 
+
+    public IndexMagicItemsDTO getMagicItemByIndex(String index){
+        MagicItemsRoot magicItemsRoot = dndClient.getMagicItemByIndex(index);
+        return mapper.toDto(magicItemsRoot);
+    }
 
     public GetAllLists getAllMagicItems(){
         Root root = dndClient.getAllMagicItems();
