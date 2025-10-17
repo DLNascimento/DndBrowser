@@ -1,7 +1,10 @@
 package com.example.DnDBrowser.business.mapper;
 
-import com.example.DnDBrowser.business.dto.MonsterDTO;
+import com.example.DnDBrowser.business.dto.AllMonstersDTO;
+import com.example.DnDBrowser.business.dto.IndexMonsterDTO;
 import com.example.DnDBrowser.business.dto.response.MonsterResponse;
+import com.example.DnDBrowser.business.dto.response.Result;
+import com.example.DnDBrowser.business.dto.response.Root;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -16,6 +19,6 @@ public interface MonsterMapper {
     @Mapping(source = "challenge_rating", target = "challengeRating")
     @Mapping(source = "special_abilities", target = "specialAbilities")
     @Mapping(source = "legendary_actions", target = "legendaryActions")
-    MonsterDTO toDto(MonsterResponse monsterResponse);
-    List<MonsterDTO> toListDto(List<MonsterResponse> listMonsterResponse);
+    IndexMonsterDTO toDto(MonsterResponse monsterResponse);
+    AllMonstersDTO toDto(Root root);
 }
