@@ -4,7 +4,7 @@ import com.example.DnDBrowser.business.dto.response.Result;
 
 import java.util.List;
 
-public record AllMonstersDTO(
+public record GetAllLists(
         int count,
         List<Result> results
 ) {

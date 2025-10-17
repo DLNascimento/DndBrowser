@@ -17,4 +17,7 @@ public interface DndClient {
     @GetMapping("/api/2014/monsters")
     Root getAllMonsters();
 
+    @GetMapping("api/2014/magic-items/")
+    Root getAllMagicItems();
+
 }

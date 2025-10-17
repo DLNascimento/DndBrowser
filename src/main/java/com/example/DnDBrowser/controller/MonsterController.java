@@ -1,6 +1,6 @@
 package com.example.DnDBrowser.controller;
 
-import com.example.DnDBrowser.business.dto.AllMonstersDTO;
+import com.example.DnDBrowser.business.dto.GetAllLists;
 import com.example.DnDBrowser.business.dto.IndexMonsterDTO;
 import com.example.DnDBrowser.business.service.MonsterService;
 import lombok.RequiredArgsConstructor;
@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 
 @RestController
@@ -28,8 +26,8 @@ public class MonsterController {
     }
 
     @GetMapping
-    public ResponseEntity<AllMonstersDTO> getAllMonsters(){
-       AllMonstersDTO getAllMonsters = service.getAllMonsters();
+    public ResponseEntity<GetAllLists> getAllMonsters(){
+       GetAllLists getAllMonsters = service.getAllMonsters();
         return ResponseEntity.ok(getAllMonsters);
     }
 
